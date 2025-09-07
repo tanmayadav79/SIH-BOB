@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { FcGoogle } from 'react-icons/fc';
-import { FaGithub } from 'react-icons/fa';
 
 const Login = () => {
   const [ state, setState ] = useState('Login');
@@ -25,7 +24,6 @@ const Login = () => {
         </div>
         <div className='flex justify-center items-center gap-4'>
           <button className='border-gray-400 cursor-pointer'><FcGoogle size={28} /></button>
-          <button className='border-gray-400 cursor-pointer'><FaGithub size={28} /></button>
         </div>
       <div className='text-center text-sm text-gray-600 mt-4'>
         {state === 'Sign Up' ? 'Already a user?' : 'Need an account?'}

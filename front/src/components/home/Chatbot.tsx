@@ -17,7 +17,7 @@ export const Chatbot = () => {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-25 right-2 w-80 h-80 bg-[#5e9b9c] rounded-lg shadow-lg z-50 flex flex-col">
+        <div className="fixed bottom-25 right-2 w-80 h-80 bg-[#567a7f] rounded-lg shadow-lg z-50 flex flex-col">
           <header className="bg-black text-white p-4 rounded-t-lg font-bold">
             Chat with BOB Bot
           </header>

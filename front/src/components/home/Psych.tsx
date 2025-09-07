@@ -33,7 +33,7 @@ export const PsychEducation = () => {
       <div className="flex flex-col items-center">
         {topics.map((topic, index) => (
           <div key={topic.id} className="flex flex-col items-center w-full max-w-md">
-            <div className="w-full max-w-6xl px-3 py-2 rounded-xl bg-[#5e9b9c] shadow-md flex justify-between items-center">
+            <div className="w-full max-w-6xl px-3 py-2 rounded-xl bg-[#567a7f] shadow-md flex justify-between items-center">
                 <div className="flex flex-col max-w-[70%]">
                     <h3 className="text-sm sm:text-base font-semibold mb-2">{topic.title}</h3>
                     <p className="text-xs sm:text-sm">{topic.description}</p>

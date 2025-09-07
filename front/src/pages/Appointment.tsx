@@ -19,7 +19,7 @@ export const Appointment = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-[#5e9b9c] rounded-lg shadow-md mt-10">
+    <div className="max-w-lg mx-auto p-8 bg-[#567a7f] rounded-lg shadow-md mt-10">
       <h1 className="text-2xl font-bold mb-6 text-center">Book an Appointment</h1>
       <form onSubmit={handleSubmit} className="space-y-5">
         <input

@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
       <div className='w-full min-h-[70px] flex justify-center items-center'>
-        <nav className='w-full max-w-6xl px-3 py-2 rounded-xl bg-[#5e9b9c] shadow-md flex justify-between items-center'>
+        <nav className='w-full max-w-6xl px-3 py-2 rounded-xl bg-[#567a7f] shadow-md flex justify-between items-center'>
             <div className='flex items-center space-x-4'>
                 <span className='text-black font-bold text-2xl tracking-wide'>
                   <a href="/">BOB</a>
