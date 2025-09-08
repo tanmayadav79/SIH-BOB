@@ -3,5 +3,9 @@
   "builds": [
     { "src": "api/login.js", "use": "@vercel/node" },
     { "src": "api/signup.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/login", "dest": "/api/login.js" },
+    { "src": "/api/signup", "dest": "/api/signup.js" }
   ]
 }
