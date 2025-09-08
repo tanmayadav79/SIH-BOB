@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/login.js", "use": "@vercel/node" },
+    { "src": "api/signup.js", "use": "@vercel/node" }
+  ]
+}

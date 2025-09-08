@@ -1,10 +1,18 @@
 import { Menu, Plus } from "lucide-react";
 import { useState } from "react"
+import { toast } from "react-toastify";
 
 export default function Navbar() {
     const [ open, setOpen ] = useState(false);
     const authenticated = Boolean(localStorage.getItem("token"));
     const currentPath = window.location.pathname;
+
+    const handleLogout = () => {
+      if(!confirm("Are you sure you want to logout?")) return;
+      localStorage.removeItem("token");
+      toast.success("Logged out successfully");
+      window.location.href = "/login";
+    }
 
     return (
       <div className='w-full min-h-[70px] flex justify-center items-center'>
@@ -17,7 +25,7 @@ export default function Navbar() {
 
             <div className='hidden sm:flex items-center space-x-4'>
               <ul className='hidden sm:flex gap-5 text-sm mt-2'>
-                {["Home", "Dashboard", "Appointment"].map((item, index) => (
+                {["Home", "Resources", "Appointment"].map((item, index) => (
                 <li key={index}>
                   <a  href={item === "Home" ? "/" : `/${item.toLowerCase()}`} className='group flex flex-col items-center gap-2'>
                     <p className={`${currentPath === (item === "Home" ? "/" : `/${item.toLowerCase()}`) ? "text-black font-semibold" : "text-white"}`}>{item}</p>
@@ -27,7 +35,7 @@ export default function Navbar() {
                 ))}
               </ul>
               {authenticated ? (
-                <button className='bg-white hidden sm:block text-sm shadow-md text-black font-semibold px-4 py-2 rounded-md'>Logout</button>
+                <button onClick={handleLogout} className='bg-white hidden sm:block text-sm shadow-md text-black font-semibold px-4 py-2 rounded-md'>Logout</button>
               ) : (
                 <button className='bg-white hidden sm:block text-sm shadow-md text-black font-semibold px-4 py-2 rounded-md'><a href="/login" className='hover:font-bold'>Login</a></button>
               )}
@@ -38,7 +46,7 @@ export default function Navbar() {
               {open && (  
                 <div className='absolute top-18 left-1/2 -translate-x-1/2 max-w-[360px] w-[95vw] px-2 flex flex-col items-center bg-[#5e9b9c] shadow-xl rounded-xl p-4'>
                   <ul className='flex flex-col space-y-2 text-sm mt-2'>
-                    {["Home", "Dashboard", "Appointment"].map((item, index) => (
+                    {["Home", "Resources", "Appointment"].map((item, index) => (
                       <li key={index}>
                         <a href={item === "Home" ? "/" : `/${item.toLowerCase()}`} className='group flex flex-col items-center gap-2'>
                           <p className={`${currentPath === (item === "Home" ? "/" : `/${item.toLowerCase()}`) ? "text-black font-semibold" : "text-white"}`}>{item}</p>

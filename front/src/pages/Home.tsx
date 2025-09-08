@@ -1,7 +1,6 @@
 import { AppointmentBooking } from "../components/home/AppointmentButton"
 import { Banner } from "../components/home/Banner"
 import { Chatbot } from "../components/home/Chatbot"
-import { PsychEducation } from "../components/home/Psych"
 import { OnlineCommunity } from "../components/home/Community"
 
 export const Home = () => {
@@ -13,7 +12,6 @@ export const Home = () => {
         Don't wanna talk? <span className="font-semibold">Feel free to Chat with BOB Bot</span>.
       </p>
       <Chatbot />
-      <PsychEducation />
       <OnlineCommunity />
     </div>
   )
