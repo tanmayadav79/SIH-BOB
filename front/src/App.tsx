@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import { Appointment } from './pages/Appointment'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { Psych } from './pages/Psych'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/resources" element={<Psych/>}/>
         </Routes>
       </div>
       <Footer />

@@ -28,8 +28,8 @@ const topics: Topic[] = [
 
 export const PsychEducation = () => {
   return (
-    <div>
-      <h2 className="text-2 xl font-semibold mb-6">Psych Educational Material</h2>
+    <div className="mt-5">
+      <h2 className="text-2xl font-semibold mb-10">Psych Educational Material</h2>
       <div className="flex flex-col items-center">
         {topics.map((topic, index) => (
           <div key={topic.id} className="flex flex-col items-center w-full max-w-md">
